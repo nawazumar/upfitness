@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Up Fitness Form</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style/style.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+</head>
+
+<body>
+<div class="container contact">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="contact-info">
+                <img alt="company logo" src="img/ultimate-performance.png"/>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <form action="" id="contact-us-form" method="post">
+                <h3>Get in touch and let's see what we can do!</h3>
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="name">First Name:</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="name" name="name" placeholder="Enter First Name" required
+                                   type="text"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" id="email" name="email" placeholder="Enter email" required
+                                   type="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="comment">Comment:</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="comment" name="comment" required rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button class="btn btn-default submit" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- modal for collecting the values and giving user the option to either cancel or continue -->
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="confirm-submit" role="dialog"
+     tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Confirm Submit
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to submit the following details?</p>
+                <div class="form-group">
+                    <label class="bold">Name:</label>
+                    <span id="uName"></span>
+                    <br/>
+                    <label class="bold">Email:</label>
+                    <span id="uEmail"></span>
+                    <br/>
+                    <label class="bold">Comment:</label>
+                    <p id="uComment"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" type="button">Cancel</button>
+                <a class="btn btn-default submit btn-success" href="#" id="submit">Submit</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/form-validator.js" type="application/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
